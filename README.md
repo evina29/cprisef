@@ -6,11 +6,11 @@ cprisef is a hands free cpr compression rig with ai guidance, and it was built f
 
 when someone collapses, good chest compressions have to start right away and keep going at a steady pace. in real life that is very hard to do. rescuers get tired within a couple of minutes, their depth and rhythm drift, and the person doing the compressions is often untrained and scared. i wanted to find out whether a machine could hold the pace so that people can focus on calling for help and guiding the rescue.
 
-## what we are building
+## what i am building
 
 cprisef is a test rig that performs compressions by itself. a motor drives a two stage gearbox, and a scotch yoke turns the spinning motion into a straight up and down push. the pad presses about 50 mm at 120 compressions a minute with roughly 500 n of force.
 
-the ai guidance part is still being defined. it will sit on top of this rig and tell the rescuer what to do next. the team will fill in this section once the design is final.
+the ai guidance part is still being defined. it will sit on top of this rig and tell the rescuer what to do next. i will fill in this section once the design is final.
 
 ## how to use this repo
 
