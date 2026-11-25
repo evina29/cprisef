@@ -16,5 +16,5 @@ for child in cprisef.asm.children:
     if isinstance(shape, cq.Workplane):
         shape = cq.Workplane("XY").add(shape.vals())
     path = os.path.join(out, f"{child.name}.step")
-    cq.exporters.export(shape, path)
+    cq.exporters.export(shape, path, opt={"write_pcurves": False})  # smaller files
     print("wrote", path, os.path.getsize(path), "bytes")
