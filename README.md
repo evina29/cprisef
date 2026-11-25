@@ -1,130 +1,92 @@
-# automatic cpr rig with ai guidance
+# cprisef
 
-cardiac arrest kills most of the people it hits, and a lot of that comes down to cpr not being good enough or not starting fast enough. this project is our answer: a machine that does chest compressions for you, with ai guidance and help to make the whole thing easier to use under pressure.
-
-this repo holds the cad for our test rig, which is the part that does the pushing, plus the code that builds it.
+a hands free cpr compression rig with ai guidance, built for isef.
 
 ## the problem
 
-every year there are over 350,000 cardiac arrests outside hospitals in the us and over 270,000 in the eu, and around 90 percent of them are fatal. a big reason is not enough cpr, either because bystanders are not doing it well or because help arrives late. doing compressions by hand is exhausting, and tired hands make mistakes.
-
-the machines that exist today are not great either. the main one is bulky, costs around 20,000 dollars, does not fit large patients, and can cause more skin damage and rib fractures than doing it by hand. we think a cheaper, smaller and softer machine is possible.
+when someone collapses, good chest compressions have to start right away and keep going at a steady pace. in real life that is hard. rescuers get tired within a couple of minutes, their depth and rhythm drift, and the person doing it is often untrained and scared. i wanted to see if a machine could hold the pace so a person can focus on calling for help and guiding the rescue.
 
 ## what we are building
 
-an automatic, hands free cpr device that is light enough to carry, cheap to make, and soft on the patient, with ai guidance and help on top. we will write up the ai part here as we build it.
+cprisef is a test rig that does compressions by itself. a motor drives a two stage gearbox, and a scotch yoke turns the spinning motion into a straight up and down push. the pad presses about 50 mm at 120 compressions a minute with roughly 500 N of force.
+
+the ai guidance part is still being defined. it will sit on top of this rig and tell the rescuer what to do next. (to be filled in by the team once the design is final.)
+
+## how to use this repo
+
+the cad model is written in python with cadquery. to build the step file:
+
+    pip install -r requirements.txt
+    python cprisef.py cprisef_rig.step
+
+you can import the step file into onshape or any other cad tool. every push to main also builds it with github actions, and you can download the files from the actions tab.
 
 ## what is in this repo
 
-cpr_rig.py builds our test rig as a 14 part assembly in millimetres and saves it as a step file. you can open that in onshape, fusion, solidworks or freecad.
-
-```
-pip install -r requirements.txt
-python cpr_rig.py cpr_lifeline_rig.step
-```
-
-you get one step file and one stl file for each main part. to use it in onshape, press create, then import, then pick the step file.
-
-if you do not want to set anything up, open the actions tab on github, run the build step workflow, and download the files it makes.
-
-all the sizes are plain variables at the top of cpr_rig.py. change them and run it again to get a new model.
+| file | what it is |
+|---|---|
+| cprisef.py | parametric cad script for the whole rig |
+| requirements.txt | python packages needed |
+| .github/workflows/build-step.yml | builds the step and stl files on every push |
+| docs/assembly.svg | full 3d assembly picture |
+| docs/wiring.svg | wiring diagram |
 
 ## screenshots
 
 ### full 3d assembly
 
-![3d assembly of the test rig seen from the gear side](docs/assembly.svg)
-
-wood frame, 150 watt motor, two stage gear train that slows it down 25 to 1, the yoke, the rod and the microfiber pad. the gears are drawn as simple discs in this picture. the step file has real toothed gears.
+![3d assembly](docs/assembly.svg)
 
 ### wiring diagram
 
-![wiring diagram showing a bench power supply connected to the motor](docs/wiring.svg)
+![wiring diagram](docs/wiring.svg)
 
 ### pcb
 
-there is no pcb yet. the motor runs straight from a bench power supply.
+there is no custom pcb in this version. the motor runs from an off the shelf speed controller, so the wiring diagram above is the full electrical design.
 
 ### 3d render
 
-the assembly picture above is the render.
+the assembly picture above is the render. a step file is built by github actions for anyone who wants to open the model in their own cad tool.
 
 ## specs of the test rig
 
-* motor: 150 watt dc, 3000 rpm
-* gearbox: two stages of 16 teeth into 80 teeth, which makes 25 to 1
-* output: 120 rpm, so 120 compressions a minute
-* crank radius: 25 mm, which gives about 2 inches of travel
-* force target: about 500 newtons
-* pad: 80 mm wide and 15 mm thick, made of microfiber
-* frame: a wooden table, with the other parts 3d printed
+| item | value |
+|---|---|
+| motor | 150 W dc, 3000 rpm |
+| gearbox | two stage spur gears, 25 to 1 total |
+| gear module | 1.5, with 16 tooth and 80 tooth gears |
+| output speed | 120 compressions per minute |
+| mechanism | scotch yoke, 25 mm crank radius |
+| stroke | 50 mm |
+| peak force | about 500 N |
+| frame | wood |
 
-the frame size, wood sizes, motor body size, gear widths and tooth shape are estimates and can be changed.
+## materials, prices and links
 
-## not a medical device
+prices were checked on 25 november 2026 and are in us dollars. they change, so check the link before you order.
 
-this is a cad and software project. it has not been tested or approved as medical equipment and it must never be used on a person.
-# cpr lifeline rig, plus ai guidance
+| part | qty | price each | link |
+|---|---|---|---|
+| 16 tooth steel spur gear, module 1.5, 8 mm bore | 2 | $19.99 | [zoro](https://www.zoro.com/khk-usa-steel-spur-gears-ss15-16b/i/G104670229) |
+| 80 tooth steel spur gear, module 1.5, 15 mm bore | 2 | $89.29 | [zoro](https://www.zoro.com/khk-usa-hubless-steel-spur-gears-ssa15-80/i/G304670562/) |
+| 20 A pwm dc motor speed controller | 1 | $8.72 | [ebay](https://www.ebay.com/itm/12V-24V-Max-20A-PWM-DC-Motor-Stepless-Variable-Speed-Control-Controller-Switch-/111936836128) |
+| 24 V 15 A power supply (mean well lrs 350 24) | 1 | $31.35 | [bravo electro](https://www.bravoelectro.com/lrs-350-24.html) |
+| 8 mm precision ground rotary shaft | 1 m | $6.50 | [phidgets](https://phidgets.com/?prodid=875) |
+| pillow block bearings for 8 mm shaft, pack of 2 | 2 packs | $4.25 | [phidgets](https://phidgets.com/?prodid=875) |
+| 150 W 24 V dc motor, about 3000 rpm | 1 | not priced yet | see note below |
+| plywood for the frame, pad and yoke | 1 | not priced yet | local hardware store |
 
-this project builds on the cpr lifeline idea: a machine that does chest compressions for you, held on with a padded strap that fits any chest size. we are not trying to validate the original cpr lifeline. we took its idea and its prototype as a starting point, and we are adding ai guidance and help on top of it.
+the priced parts add up to about $273.63 before shipping and tax. the motor and wood are not included in that number, so the real total is higher.
 
-all credit for the cpr lifeline concept, its specs and the background numbers below goes to the original cpr lifeline project. the cad in this repo is our own model of their test rig, rebuilt from the numbers they gave in their video.
+### things to know about this list
 
-## what it is and how to use it
+the motor is the open item. i could not find a 150 W, 24 V, 3000 rpm brushed motor with a clear price. options i found were a discontinued rs pro 156 W motor at 3000 rpm, a maxon 150 W motor that spins at 7580 rpm (wrong speed, it would change the gear ratio), and a neoton 150 W brushless motor at 3000 rpm with no price shown. the team needs to pick one and update this table.
 
-cpr_rig.py builds the whole rig as a 14 part assembly in millimetres and saves it as a step file. you can open that in onshape, fusion, solidworks or freecad.
+the gear quantities assume the two stage 25 to 1 gearbox uses two 16 tooth and two 80 tooth gears. the 80 tooth gear has a 15 mm bore and the shafts here are 8 mm, so the bores and shaft sizes in cprisef.py must be matched before ordering.
 
-```
-pip install -r requirements.txt
-python cpr_rig.py cpr_lifeline_rig.step
-```
+the speed controller listed is a generic one, not a medical or lab grade part.
 
-you get cpr_lifeline_rig.step and one stl file for each main part. to use it in onshape, press create, then import, then pick the step file.
+## safety and ethics
 
-if you do not want to set anything up, open the actions tab on github, run the build step workflow, and download the files it makes.
-
-all the sizes are plain variables at the top of cpr_rig.py. change them and run it again to get a new model.
-
-## why we made it
-
-these numbers come from the cpr lifeline project. every year there are over 350,000 cardiac arrests outside hospitals in the us and over 270,000 in the eu, and around 90 percent of them are fatal. a big reason is not enough cpr, either because bystanders are not doing it well or because help arrives late. a machine that does it automatically would save time and effort and let medical teams focus on other care.
-
-they compared their idea to the lucas device, which does not fit large patients, causes more skin damage and rib fractures than manual cpr, and costs about 20,000 dollars. their idea answers that with an adjustable padded strap, soft microfiber pads, a small design that costs about 200 dollars in parts, and room for defibrillation pads so an aed can be used during cpr.
-
-we want to take that idea further by adding ai guidance and help. we will write that part up here as we build it.
-
-## screenshots
-
-### full 3d assembly
-
-![3d assembly of the test rig seen from the gear side](docs/assembly.svg)
-
-wood frame, 150 watt motor, two stage gear train that slows it down 25 to 1, the yoke, the rod and the microfiber pad. the gears are drawn as simple discs in this picture. the step file has real toothed gears.
-
-### wiring diagram
-
-![wiring diagram showing a bench power supply connected to the motor](docs/wiring.svg)
-
-### pcb
-
-there is no pcb yet. the motor runs straight from a bench power supply.
-
-### 3d render
-
-the assembly picture above is the render.
-
-## specs we modelled from the cpr lifeline prototype
-
-* motor: 150 watt dc, 3000 rpm
-* gearbox: two stages of 16 teeth into 80 teeth, which makes 25 to 1
-* output: 120 rpm, so 120 compressions a minute
-* crank radius: 25 mm, which gives about 2 inches of travel
-* force target: about 500 newtons
-* pad: 80 mm wide and 15 mm thick, made of microfiber
-* frame: a wooden table, with the other parts 3d printed
-
-the frame size, wood sizes, motor body size, gear widths and tooth shape are our own estimates and did not come from the video.
-
-## not a medical device
-
-this is a cad and software project. it has not been tested or approved as medical equipment and it must never be used on a person.
+no human participants are involved. the rig is only ever tested on a manikin or a force sensor, never on a person. no results exist yet, this repo is the design and plan. cprisef is a science fair project and is not a medical device. it must not be used on a real patient. the project will follow the isef rules on safety, ethics, academic integrity and the use of generative ai, and any design or source that inspired it will be credited in the project paperwork.
