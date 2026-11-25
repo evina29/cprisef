@@ -125,13 +125,11 @@ these items are my assumption about what the testing and ai parts will need, bec
 
 ### things to check before you order
 
-the model uses an 8 mm motor shaft, an 8 mm intermediate shaft and a 12 mm output shaft. the 80 tooth gears i found come with bores such as 10 mm, 12.7 mm, 15 mm and 20 mm, so either change the shaft sizes in cprisef.py or have the gears bored to match. the bearings above are sized for 8 mm and 12 mm shafts.
+the model uses 8 mm motor and intermediate shafts and a 12 mm output shaft, but the 80 tooth gears i found only come with bores of 10 mm, 12.7 mm, 15 mm or 20 mm. either change the shaft sizes in cprisef.py or have the gears bored to match.
 
-the motor draws about 12.5 a at full load on 12 v, which is why the power supply is rated 30 a and the controller is rated 20 a. check the emergency stop rating before you wire it, and if it is below the motor current, use it to switch a relay or the supply side and not the motor current directly.
+the motor draws about 12.5 a at full load on 12 v, so check that the emergency stop is rated for that current. if it is not, use it to switch a relay or the supply side instead of the motor directly.
 
-the plywood is sold in 24 inch squares, so check the frame dimensions in cprisef.py before you order. the crank pin in the model is 9 mm, so plan to use an m8 bolt or turn a pin to size.
-
-the power supply listed has screw terminals and no plug, so the power cord needs its end stripped and wired to the supply by someone who knows how to work safely with mains voltage. the solder is a tin and lead alloy, so work with ventilation and wash your hands afterward.
+the power cord has to be stripped and wired to the supply, which means working with mains voltage. only do this if you know how to do it safely.
 
 ## safety and ethics
 
