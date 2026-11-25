@@ -1,100 +1,64 @@
-# CPR Lifeline test rig (CAD)
+# cpr lifeline rig, plus ai guidance
 
-A parametric CAD model (CadQuery, Python) of the scotch-yoke prototype rig built to validate the **CPR Lifeline**, an automatic, hands-free chest-compression device concept for cardiac arrest. The rig drives a padded rod at 120 compressions per minute with about 2 in (50 mm) of travel and about 500 N of force.
+this project builds on the cpr lifeline idea: a machine that does chest compressions for you, held on with a padded strap that fits any chest size. we are not trying to validate the original cpr lifeline. we took its idea and its prototype as a starting point, and we are adding ai guidance and help on top of it.
 
-## What it is and how to use it
+all credit for the cpr lifeline concept, its specs and the background numbers below goes to the original cpr lifeline project. the cad in this repo is our own model of their test rig, rebuilt from the numbers they gave in their video.
 
-`cpr_rig.py` builds the whole rig as a 14-part assembly in millimetres and exports it as a STEP file, which opens in Onshape, Fusion, SolidWorks or FreeCAD.
+## what it is and how to use it
 
-```
-pip install -r requirements.txt
-python cpr_rig.py cpr_lifeline_rig.step
-```
-
-- Output: `cpr_lifeline_rig.step` plus one STL per main part.
-- Onshape: **Create > Import**, then pick the STEP file.
-- No local setup: run the **Build STEP** workflow in the Actions tab and download the `cpr-lifeline-rig-cad` artifact.
-- Change sizes by editing the variables at the top of `cpr_rig.py` (gear module, tooth counts, crank radius, frame size, pad size) and rebuilding.
-
-## Why I made it
-
-Over 350,000 out-of-hospital cardiac arrests happen each year in the US and over 270,000 in the EU, and around 90% are fatal. A big reason is insufficient CPR, whether from bystanders or from delayed paramedics. A safe, automatic, hands-free CPR device would save time and effort and let medical teams focus on other care.
-
-The current state of the art, the Lucas device, has drawbacks:
-
-- It does not fit large patients, who have the highest likelihood of cardiac arrest.
-- It causes more injuries (skin lesions, rib fractures) than manual CPR.
-- It costs about $20,000 and is bulky, which hurts portability.
-
-The CPR Lifeline addresses these with an adjustable padded strap that fits any chest size, full-contact microfiber pads (8 cm diameter, 1.5 cm thick) that spread pressure like a palm, a compact lightweight design with a bill of materials of about $200, and room for defibrillation pads to be placed diagonally so an AED can be used during CPR. This repo models the prototype test rig used to validate the mechanism.
-
-## Screenshots
-
-### Full 3D assembly
-
-![3D assembly of the test rig, seen from the gear side](docs/assembly.svg)
-
-Wood frame, 150 W motor, two-stage 25:1 gear train, scotch yoke, linear rod and microfiber pad. Gears are drawn as simple discs in this picture; the STEP file has toothed gears.
-
-### Wiring diagram
-
-![Wiring diagram: bench supply to DC motor](docs/wiring.svg)
-
-### PCB
-
-There is no PCB. The prototype runs the motor straight from a bench power supply, and the video shows no circuit board.
-
-### 3D render
-
-The assembly image above is the render. A render of the final strapped device is not part of this repo.
-
-## Specs modelled
-
-| Item | Value |
-| --- | --- |
-| Motor | 150 W DC, 3000 RPM |
-| Reduction | two spur stages, 16T into 80T each, 25:1 total |
-| Output speed | 120 RPM (120 compressions per minute) |
-| Scotch-yoke crank radius | 25 mm (50 mm, about 2 in, of stroke) |
-| Force target | about 500 N |
-| Pad | 80 mm diameter, 15 mm thick microfiber |
-| Frame | wooden table-style frame, other parts 3D printed |
-
-Frame size, wood sizes, motor body size, gear widths and the gear tooth profile are estimates, not values from the source video.
-
-## Future work
-
-Medical-grade components and metal parts for durability, better microfiber pressure distribution, and a rechargeable lithium-polymer battery sized for about 30 minutes of use, which is longer than the average CPR duration.
-# CPR Lifeline test rig (CAD)
-
-Parametric CadQuery model of the scotch-yoke prototype rig from the CPR Lifeline project: an automatic chest-compression device concept (padded strap, 120 compressions/min, about 2 in depth, about 500 N).
-
-## Specs modelled
-
-| Item | Value |
-| --- | --- |
-| Motor | 150 W DC, 3000 RPM |
-| Reduction | two spur stages, 16T into 80T each, 25:1 total |
-| Output speed | 120 RPM (120 compressions/min) |
-| Scotch-yoke crank radius | 25 mm (50 mm / about 2 in stroke) |
-| Pad | 80 mm dia x 15 mm microfiber |
-| Frame | wooden table-style frame, otherwise 3D-printed parts |
-
-Frame size, wood sizes, motor body size, gear widths and the gear tooth profile are estimates and are not taken from the source video.
-
-## Build the CAD files
+cpr_rig.py builds the whole rig as a 14 part assembly in millimetres and saves it as a step file. you can open that in onshape, fusion, solidworks or freecad.
 
 ```
 pip install -r requirements.txt
 python cpr_rig.py cpr_lifeline_rig.step
 ```
 
-This writes `cpr_lifeline_rig.step` (14 named parts, millimetres) plus one STL per main part. Import the STEP into Onshape with **Create > Import**.
+you get cpr_lifeline_rig.step and one stl file for each main part. to use it in onshape, press create, then import, then pick the step file.
 
-You can also run the **Build STEP** workflow in the Actions tab and download the `cpr-lifeline-rig-cad` artifact.
+if you do not want to set anything up, open the actions tab on github, run the build step workflow, and download the files it makes.
 
-## Edit dimensions
+all the sizes are plain variables at the top of cpr_rig.py. change them and run it again to get a new model.
 
-All sizes are plain variables near the top of `cpr_rig.py` (module, tooth counts, crank radius, frame size, pad size). Change them and rebuild.
-# cpr-lifeline-rig
-Parametric CAD model (CadQuery) of the CPR Lifeline scotch-yoke test rig
+## why we made it
+
+these numbers come from the cpr lifeline project. every year there are over 350,000 cardiac arrests outside hospitals in the us and over 270,000 in the eu, and around 90 percent of them are fatal. a big reason is not enough cpr, either because bystanders are not doing it well or because help arrives late. a machine that does it automatically would save time and effort and let medical teams focus on other care.
+
+they compared their idea to the lucas device, which does not fit large patients, causes more skin damage and rib fractures than manual cpr, and costs about 20,000 dollars. their idea answers that with an adjustable padded strap, soft microfiber pads, a small design that costs about 200 dollars in parts, and room for defibrillation pads so an aed can be used during cpr.
+
+we want to take that idea further by adding ai guidance and help. we will write that part up here as we build it.
+
+## screenshots
+
+### full 3d assembly
+
+![3d assembly of the test rig seen from the gear side](docs/assembly.svg)
+
+wood frame, 150 watt motor, two stage gear train that slows it down 25 to 1, the yoke, the rod and the microfiber pad. the gears are drawn as simple discs in this picture. the step file has real toothed gears.
+
+### wiring diagram
+
+![wiring diagram showing a bench power supply connected to the motor](docs/wiring.svg)
+
+### pcb
+
+there is no pcb yet. the motor runs straight from a bench power supply.
+
+### 3d render
+
+the assembly picture above is the render.
+
+## specs we modelled from the cpr lifeline prototype
+
+* motor: 150 watt dc, 3000 rpm
+* gearbox: two stages of 16 teeth into 80 teeth, which makes 25 to 1
+* output: 120 rpm, so 120 compressions a minute
+* crank radius: 25 mm, which gives about 2 inches of travel
+* force target: about 500 newtons
+* pad: 80 mm wide and 15 mm thick, made of microfiber
+* frame: a wooden table, with the other parts 3d printed
+
+the frame size, wood sizes, motor body size, gear widths and tooth shape are our own estimates and did not come from the video.
+
+## not a medical device
+
+this is a cad and software project. it has not been tested or approved as medical equipment and it must never be used on a person.
