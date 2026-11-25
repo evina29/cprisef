@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "filename": "cprisef.kicad_prl",
+    "version": 3
+  },
+  "board": {
+    "active_layer": 0,
+    "visible_layers": "0x00010fc_ffffffff"
+  },
+  "project": {
+    "files": []
+  }
+}
