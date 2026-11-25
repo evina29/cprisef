@@ -1,6 +1,6 @@
-"""CPR Lifeline prototype rig (scotch-yoke compression tester), units: mm.
+"""CPRISEF test rig (scotch yoke compression tester), units: mm.
 
-Spec taken from the video narration:
+Specs:
   - DC motor, 150 W, 3000 RPM
   - double-stage spur gear reducer, 25:1  -> 120 RPM out (5:1 x 5:1)
   - scotch yoke, sliding pin at radius 25 mm -> linear rod stroke 50 mm (~2 in)
@@ -105,7 +105,7 @@ holder = cq.Workplane("XY", origin=(0, 22, 145)).circle(40).extrude(5)
 pad = (cq.Workplane("XY", origin=(0, 22, 130)).circle(40).extrude(15))
 
 # ---------- assemble ----------
-asm = cq.Assembly(name="CPR_Lifeline_Test_Rig")
+asm = cq.Assembly(name="CPRISEF_Test_Rig")
 def add(name, shape, color):
     asm.add(shape, name=name, color=cq.Color(*color))
 
@@ -126,7 +126,7 @@ add("microfiber_pad_80x15", pad, (0.93, 0.93, 0.93))
 
 if __name__ == "__main__":
     import sys
-    out = sys.argv[1] if len(sys.argv) > 1 else "cpr_lifeline_rig.step"
+    out = sys.argv[1] if len(sys.argv) > 1 else "cprisef_rig.step"
     asm.save(out)
     # also single-part STEPs/STLs for individual import
     parts = {n: o for n, o in [
