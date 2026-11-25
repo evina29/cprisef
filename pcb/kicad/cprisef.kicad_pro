@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "filename": "cprisef.kicad_pro",
+    "version": 1
+  },
+  "board": {},
+  "net_settings": {
+    "classes": [
+      {
+        "name": "Default",
+        "track_width": 0.4,
+        "clearance": 0.2
+      }
+    ]
+  },
+  "sheets": [
+    [
+      "",
+      ""
+    ]
+  ]
+}
