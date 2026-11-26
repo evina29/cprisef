@@ -1,33 +1,34 @@
-item,used_for,qty,link,already_owned
-"150 W permanent magnet dc motor, 12 V","motor, 3000 rpm",1,https://www.amazon.com/Speed-Permanent-Magnet-Generator-3000RPM/dp/B07J4RBJ1G,to confirm
-"16 tooth steel spur gear, module 1.5, 8 mm bore",pinions,2,https://www.amazon.com/s?k=16+tooth+metal+gear,to confirm
-"80 tooth steel spur gear, module 1.5",big gears,2,https://www.amazon.com/clp/B07RN6F15V,to confirm
-"KP08 pillow block bearings, 8 mm bore, pack of 4",intermediate shaft bearings,1,https://www.amazon.com/clp/B073LDH4L7,to confirm
-"KP001 pillow block bearings, 12 mm bore, pack of 4",output shaft bearings,1,https://www.amazon.com/uxcell-Pillow-Bearings-Bearing-Mounted/dp/B0FCSDWNB1,to confirm
-"8 mm x 300 mm hardened steel rod, pack of 2",intermediate shaft,1,https://www.amazon.com/Othmro-Hardened-Chrome-Plated-8mmx300mm/dp/B081YJ7Y8N,to confirm
-"12 mm x 300 mm hardened steel rod, pack of 2",output shaft,1,https://www.amazon.com/Coavoo-Linear-Diameter-Hardened-Chrome/dp/B0CN2H35LZ,to confirm
-"metric screw, nut and washer kit, M4 to M6",mounting hardware and crank pin,1,https://www.amazon.com/Washers-Assortment-Metric-Stainless-Machine/dp/B0CCP4VWZN,to confirm
-"3/4 inch birch plywood, 24 by 24 inch, pack of 3","frame, yoke and pad",1,https://www.amazon.com/Custom-Size-Thick-Birch-Plywood/dp/B08XBQYK8S,to confirm
-12 V 30 A 360 W switching power supply,motor power,1,https://www.amazon.com/SUPERNIGHT-Switching-Universal-Regulated-Transformer/dp/B01LATMSGS,to confirm
-"20 A pwm dc motor speed controller, 10 to 60 V",motor speed,1,https://www.amazon.com/Controller-Regulator-Governor-Stepless-Modulator/dp/B0789JPD2G,to confirm
-"14 awg silicone wire, red and black, 20 ft each",main wiring,1,https://www.amazon.com/BNTECHGO-Silicone-Flexible-Stranded-Copper/dp/B08Q43DNKB,to confirm
-"inline fuse holders with assorted blade fuses, including 20 A",motor circuit protection,1,https://www.amazon.com/VicVan-Pack-Inline-Fuse-Holder/dp/B0CLK77GYN,to confirm
-22 mm latching emergency stop button,emergency stop,1,https://www.amazon.com/Uxcell-a14122300ux0109-Emergency-Latching-Mushroo/dp/B00W947PS0,to confirm
-heat shrink wire connector kit,crimp and ring terminals,1,https://www.amazon.com/clp/B01LXTK37Y,to confirm
-heat shrink tubing assortment,insulates soldered joints,1,https://www.amazon.com/Heat-Shrink-Tubing-Kit-Automotive/dp/B0BJ2FP35V,to confirm
-"14 awg power cord with bare wire end, 6 ft",mains power to the supply,1,https://www.amazon.com/s?k=14+awg+power+cord,to confirm
-"80 W adjustable temperature soldering iron kit with stand, tips, flux, tweezers and desoldering pump",soldering iron and accessories,1,https://www.amazon.com/Soldering-Adjustable-Temperature-Electronics-Desoldering/dp/B0BW4HMXJ3,to confirm
-"63/37 rosin core solder wire, 0.8 mm",solder,1,https://www.amazon.com/Twocorn-no-wash-tin-Lead-Electric-Soldering/dp/B0CP7QHFL6,to confirm
-digital multimeter with wire stripper,testing and stripping wire,1,https://www.amazon.com/KAIWEETS-Digital-Multimeter-Wire-Stripper/dp/B09NBZCNMG,to confirm
-ansi z87.1 safety glasses,eye protection,1,https://www.amazon.com/s?k=safety+glasses+z87.1,to confirm
-adult cpr training manikin,test subject,1,https://www.amazon.com/s?k=cpr+training+manikin,to confirm
-load cell kit with hx711 amplifier,compression force sensing,1,https://www.amazon.com/Bridge-Weighting-Sensor-Strain-Individual/dp/B0DHZXV8XR,to confirm
-raspberry pi 5 starter kit,runs the ai guidance software,1,https://www.amazon.com/Vilros-Raspberry-Starter-Kit-MAX/dp/B0D232HN74,to confirm
-5 mp camera module for raspberry pi,lets the software watch compressions,1,https://www.amazon.com/Arducam-Megapixels-Sensor-OV5647-Raspberry/dp/B012V1HEP4,to confirm
-"raspberry pi pico, headers not required",interface board microcontroller,1,https://www.amazon.com/s?k=raspberry+pi+pico,to confirm
-"2.54 mm female header strip, 1x20",pico sockets on the interface board,2,https://www.amazon.com/s?k=2.54mm+female+header+1x20,to confirm
-"2.54 mm male header strip, 40 pin",headers on the interface board,1,https://www.amazon.com/s?k=2.54mm+male+header+strip+40+pin,to confirm
-"100 nf ceramic capacitor assortment, 2.54 mm lead pitch",hx711 supply decoupling c1,1,https://www.amazon.com/s?k=ceramic+capacitor+assortment+100nf+through+hole,to confirm
-"active buzzer, 3.3 v to 5 v",guidance and emergency stop alert,1,https://www.amazon.com/s?k=active+buzzer+3.3v+5v,to confirm
-5 mm led assortment with resistors,status led on j5,1,https://www.amazon.com/s?k=5mm+led+assortment+resistors,to confirm
-dupont jumper wire kit,"connects board headers to the pi, load cell amplifier and buttons",1,https://www.amazon.com/s?k=dupont+jumper+wire+kit,to confirm
+item,used_for,qty,link,already_owned,est_unit_price_usd,est_total_usd,price_note
+"150 W permanent magnet dc motor, 12 V","motor, 3000 rpm",1,https://www.amazon.com/Speed-Permanent-Magnet-Generator-3000RPM/dp/B07J4RBJ1G,to confirm,45,45,estimate to confirm on the listing
+"16 tooth steel spur gear, module 1.5, 8 mm bore",pinions,2,https://www.amazon.com/s?k=16+tooth+metal+gear,to confirm,12,24,estimate to confirm on the listing
+"80 tooth steel spur gear, module 1.5",big gears,2,https://www.amazon.com/clp/B07RN6F15V,to confirm,25,50,estimate to confirm on the listing
+"KP08 pillow block bearings, 8 mm bore, pack of 4",intermediate shaft bearings,1,https://www.amazon.com/clp/B073LDH4L7,to confirm,14,14,estimate to confirm on the listing
+"KP001 pillow block bearings, 12 mm bore, pack of 4",output shaft bearings,1,https://www.amazon.com/uxcell-Pillow-Bearings-Bearing-Mounted/dp/B0FCSDWNB1,to confirm,16,16,estimate to confirm on the listing
+"8 mm x 300 mm hardened steel rod, pack of 2",intermediate shaft,1,https://www.amazon.com/Othmro-Hardened-Chrome-Plated-8mmx300mm/dp/B081YJ7Y8N,to confirm,12,12,estimate to confirm on the listing
+"12 mm x 300 mm hardened steel rod, pack of 2",output shaft,1,https://www.amazon.com/Coavoo-Linear-Diameter-Hardened-Chrome/dp/B0CN2H35LZ,to confirm,18,18,estimate to confirm on the listing
+"metric screw, nut and washer kit, M4 to M6",mounting hardware and crank pin,1,https://www.amazon.com/Washers-Assortment-Metric-Stainless-Machine/dp/B0CCP4VWZN,to confirm,15,15,estimate to confirm on the listing
+"3/4 inch birch plywood, 24 by 24 inch, pack of 3","frame, yoke and pad",1,https://www.amazon.com/Custom-Size-Thick-Birch-Plywood/dp/B08XBQYK8S,to confirm,25,25,estimate to confirm on the listing
+12 V 30 A 360 W switching power supply,motor power,1,https://www.amazon.com/SUPERNIGHT-Switching-Universal-Regulated-Transformer/dp/B01LATMSGS,to confirm,22,22,estimate to confirm on the listing
+"20 A pwm dc motor speed controller, 10 to 60 V",motor speed,1,https://www.amazon.com/Controller-Regulator-Governor-Stepless-Modulator/dp/B0789JPD2G,to confirm,14,14,estimate to confirm on the listing
+"14 awg silicone wire, red and black, 20 ft each",main wiring,1,https://www.amazon.com/BNTECHGO-Silicone-Flexible-Stranded-Copper/dp/B08Q43DNKB,to confirm,18,18,estimate to confirm on the listing
+"inline fuse holders with assorted blade fuses, including 20 A",motor circuit protection,1,https://www.amazon.com/VicVan-Pack-Inline-Fuse-Holder/dp/B0CLK77GYN,to confirm,10,10,estimate to confirm on the listing
+22 mm latching emergency stop button,emergency stop,1,https://www.amazon.com/Uxcell-a14122300ux0109-Emergency-Latching-Mushroo/dp/B00W947PS0,to confirm,9,9,estimate to confirm on the listing
+heat shrink wire connector kit,crimp and ring terminals,1,https://www.amazon.com/clp/B01LXTK37Y,to confirm,12,12,estimate to confirm on the listing
+heat shrink tubing assortment,insulates soldered joints,1,https://www.amazon.com/Heat-Shrink-Tubing-Kit-Automotive/dp/B0BJ2FP35V,to confirm,9,9,estimate to confirm on the listing
+"14 awg power cord with bare wire end, 6 ft",mains power to the supply,1,https://www.amazon.com/s?k=14+awg+power+cord,to confirm,10,10,estimate to confirm on the listing
+"80 W adjustable temperature soldering iron kit with stand, tips, flux, tweezers and desoldering pump",soldering iron and accessories,1,https://www.amazon.com/Soldering-Adjustable-Temperature-Electronics-Desoldering/dp/B0BW4HMXJ3,to confirm,28,28,estimate to confirm on the listing
+"63/37 rosin core solder wire, 0.8 mm",solder,1,https://www.amazon.com/Twocorn-no-wash-tin-Lead-Electric-Soldering/dp/B0CP7QHFL6,to confirm,10,10,estimate to confirm on the listing
+digital multimeter with wire stripper,testing and stripping wire,1,https://www.amazon.com/KAIWEETS-Digital-Multimeter-Wire-Stripper/dp/B09NBZCNMG,to confirm,22,22,estimate to confirm on the listing
+ansi z87.1 safety glasses,eye protection,1,https://www.amazon.com/s?k=safety+glasses+z87.1,to confirm,8,8,estimate to confirm on the listing
+adult cpr training manikin,test subject,1,https://www.amazon.com/s?k=cpr+training+manikin,to confirm,60,60,estimate to confirm on the listing
+load cell kit with hx711 amplifier,compression force sensing,1,https://www.amazon.com/Bridge-Weighting-Sensor-Strain-Individual/dp/B0DHZXV8XR,to confirm,14,14,estimate to confirm on the listing
+raspberry pi 5 starter kit,runs the ai guidance software,1,https://www.amazon.com/Vilros-Raspberry-Starter-Kit-MAX/dp/B0D232HN74,to confirm,140,140,estimate to confirm on the listing
+5 mp camera module for raspberry pi,lets the software watch compressions,1,https://www.amazon.com/Arducam-Megapixels-Sensor-OV5647-Raspberry/dp/B012V1HEP4,to confirm,14,14,estimate to confirm on the listing
+"raspberry pi pico, headers not required",interface board microcontroller,1,https://www.amazon.com/s?k=raspberry+pi+pico,to confirm,6,6,estimate to confirm on the listing
+"2.54 mm female header strip, 1x20",pico sockets on the interface board,2,https://www.amazon.com/s?k=2.54mm+female+header+1x20,to confirm,7,14,estimate to confirm on the listing
+"2.54 mm male header strip, 40 pin",headers on the interface board,1,https://www.amazon.com/s?k=2.54mm+male+header+strip+40+pin,to confirm,7,7,estimate to confirm on the listing
+"100 nf ceramic capacitor assortment, 2.54 mm lead pitch",hx711 supply decoupling c1,1,https://www.amazon.com/s?k=ceramic+capacitor+assortment+100nf+through+hole,to confirm,10,10,estimate to confirm on the listing
+"active buzzer, 3.3 v to 5 v",guidance and emergency stop alert,1,https://www.amazon.com/s?k=active+buzzer+3.3v+5v,to confirm,8,8,estimate to confirm on the listing
+5 mm led assortment with resistors,status led on j5,1,https://www.amazon.com/s?k=5mm+led+assortment+resistors,to confirm,9,9,estimate to confirm on the listing
+dupont jumper wire kit,"connects board headers to the pi, load cell amplifier and buttons",1,https://www.amazon.com/s?k=dupont+jumper+wire+kit,to confirm,8,8,estimate to confirm on the listing
+total,,,,,,681,estimate for all items before tax and shipping
