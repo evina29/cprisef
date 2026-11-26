@@ -78,7 +78,7 @@ The assembly picture above is the render. The assembly source is cprisef.py, whi
 
 ## Parts and cost
 
-Everything is from Amazon, except the gears, which I design in cprisef.py and 3D print from filament. bom.csv has a link for every item, and the estimated total is about $699 before tax and shipping. Those prices are my estimates, so I will check each one against its listing before ordering. bom.csv also says whether I already own each part, and right now I own none of them.
+Everything is from Amazon, except the gears, which I design in cprisef.py and 3D print from filament. bom.csv has a link for every item, and the estimated total is about $685 before tax and shipping. Those prices are my estimates, so I will check each one against its listing before ordering. bom.csv also says whether I already own each part, and right now I own none of them. The camera for the AI stage is not in the list, because that stage comes later and I will source it myself.
 
 ## Safety and ethics
 
