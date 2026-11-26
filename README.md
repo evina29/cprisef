@@ -26,8 +26,6 @@ CPRISEF is a science fair project and not a medical device. It only ever gets te
 
 The whole rig is written in Python with CadQuery in cprisef.py, so you can change a number and rebuild it. The frame is wood. The mechanism is a motor, a two-stage gearbox, a crank, a scotch yoke and a pad.
 
-![Mechanism close-up](docs/mechanism.svg)
-
 To rebuild it:
 
     pip install -r requirements.txt
