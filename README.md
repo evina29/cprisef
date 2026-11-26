@@ -1,6 +1,6 @@
 # cprisef
 
-cprisef is a proposal for a hands free cpr compression rig with ai guidance, for isef.
+cprisef is a hands free cpr compression rig with ai guidance. i am designing it for isef and building it for fallen at hack club.
 
 ## the problem
 
