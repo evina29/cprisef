@@ -69,7 +69,7 @@ The assembly picture above is the render. The assembly source is cprisef.py, whi
 |---|---|
 | Motor | 150 W DC, 3000 rpm, 12 V version |
 | Gearbox | Two-stage spur gears, 25 to 1 total |
-| Gear module | 1.5, with 16-tooth and 80-tooth gears |
+| Gear module | 1.5, with 16-tooth and 80-tooth gears that I designed and 3D print |
 | Output speed | 120 compressions per minute |
 | Mechanism | Scotch yoke, 25 mm crank radius |
 | Stroke | 50 mm |
@@ -78,7 +78,7 @@ The assembly picture above is the render. The assembly source is cprisef.py, whi
 
 ## Parts and cost
 
-Everything is from Amazon. bom.csv has a link for every item, and the estimated total is about $763 before tax and shipping. Those prices are my estimates, so I will check each one against its listing before ordering. bom.csv also says whether I already own each part, and right now I own none of them.
+Everything is from Amazon, except the gears, which I design in cprisef.py and 3D print from filament. bom.csv has a link for every item, and the estimated total is about $699 before tax and shipping. Those prices are my estimates, so I will check each one against its listing before ordering. bom.csv also says whether I already own each part, and right now I own none of them.
 
 ## Safety and ethics
 
