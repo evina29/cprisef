@@ -1,7 +1,6 @@
 item,used_for,qty,link,already_owned,est_unit_price_usd,est_total_usd,price_note
 "150 W permanent magnet dc motor, 12 V","motor, 3000 rpm",1,https://www.amazon.com/Speed-Permanent-Magnet-Generator-3000RPM/dp/B07J4RBJ1G,no,45,45,estimate to confirm on the listing
-"16 tooth steel spur gear, module 1.5, 8 mm bore",pinions,2,https://www.amazon.com/s?k=16+tooth+metal+gear,no,18,36,estimate to confirm on the listing
-"80 tooth steel spur gear, module 1.5",big gears,2,https://www.amazon.com/clp/B07RN6F15V,no,25,50,estimate to confirm on the listing
+"PETG filament, 1.75 mm, 1 kg spool","3D printed pinions and big gears, printed from my own gear design in cprisef.py",1,https://www.amazon.com/s?k=PETG+filament+1.75mm+1kg,no,22,22,estimate to confirm on the listing
 "KP08 pillow block bearings, 8 mm bore, pack of 4",intermediate shaft bearings,1,https://www.amazon.com/clp/B073LDH4L7,no,14,14,estimate to confirm on the listing
 "KP001 pillow block bearings, 12 mm bore, pack of 4",output shaft bearings,1,https://www.amazon.com/uxcell-Pillow-Bearings-Bearing-Mounted/dp/B0FCSDWNB1,no,16,16,estimate to confirm on the listing
 "8 mm x 300 mm hardened steel rod, pack of 2",intermediate shaft,1,https://www.amazon.com/Othmro-Hardened-Chrome-Plated-8mmx300mm/dp/B081YJ7Y8N,no,12,12,estimate to confirm on the listing
@@ -31,4 +30,4 @@ raspberry pi 5 starter kit,runs the ai guidance software,1,https://www.amazon.co
 "active buzzer, 3.3 v to 5 v",guidance and emergency stop alert,1,https://www.amazon.com/s?k=active+buzzer+3.3v+5v,no,8,8,estimate to confirm on the listing
 5 mm led assortment with resistors,status led on j5,1,https://www.amazon.com/s?k=5mm+led+assortment+resistors,no,9,9,estimate to confirm on the listing
 dupont jumper wire kit,"connects board headers to the pi, load cell amplifier and buttons",1,https://www.amazon.com/dp/B07GD1XFWV,no,8,8,estimate to confirm on the listing
-total,,,,,,763,estimate for all items before tax and shipping
+total,,,,,,699,estimate for all items before tax and shipping
