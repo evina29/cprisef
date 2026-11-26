@@ -29,3 +29,12 @@ I opened the board in KiCad 7 and ran the design rule check. It reported 13 unco
 ## Journal 6: firmware, the BOM and printing the gears
 
 The firmware in firmware/main.py runs on the Pico. It reads the load cell, counts compressions, checks the rate against the 100 to 120 per minute window, sounds the buzzer if the rate drifts or the emergency stop is pressed, and sends the rate to the Pi once a second. It has not run on hardware yet. I wrote the bill of materials with a link and a price estimate for every part, about $685 in total. Fallen funds parts of my own design, so I replaced the bought steel gears with gears I design and print in PETG, and I took the camera off the funding list.
+
+## Time spent
+
+| Work | Time |
+|---|---|
+| CAD (the mechanism, the model and the STEP files, journals 1 to 3) | about 10 hours, over 2 days at 5 hours each |
+| Wiring (journal 4) | about 3 hours |
+| GitHub (the repo, README, BOM and files, journals 5 and 6) | about 10 hours |
+| Total | about 23 hours |
