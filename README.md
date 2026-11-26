@@ -53,7 +53,7 @@ The first command writes the full assembly as a STEP file that opens in Onshape 
 
 The interface board is a 70 by 70 mm two-layer board. It connects the Pico to the HX711 load cell amplifier, the emergency stop sense input, a buzzer, a status LED and a UART link to the Raspberry Pi. It carries no motor current, because the motor runs from the off-the-shelf speed controller. The schematic is in pcb/kicad/cprisef.kicad_sch.
 
-Heads up: I generated the KiCad files and gerbers with pcb/make_pcb.py and have not ordered boards yet, so I will double-check the design rules before fabricating anything.
+I generated the KiCad files and gerbers with pcb/make_pcb.py, then opened them in KiCad 7. The schematic and board both load, and the design rule check finds no errors once the ground zone is filled (press B in the PCB editor). KiCad only warns that the footprints are embedded instead of coming from a library. I have not ordered boards yet.
 
 ### Firmware
 
